@@ -2,4 +2,7 @@
 myenv/
 __pycache__/
 *.bat
-apikey.json
+*.json
+.serverless/
+node_modules/
+*.yml
