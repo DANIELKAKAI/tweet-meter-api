@@ -14,10 +14,12 @@ CORS(app)
 def index():
 	return 'tweet-meter'
 
-@app.route('/search/')
+@app.route('/search/',methods=['GET', 'POST'])
 def search():
 	sentiment = Sentiment(10)
-	q = request.args.get('q','')
+	q = ''
+	if request.method == 'GET': q = request.args.get('q','')
+	if request.method == 'POST':q = request.get_json()['query']
 	if q.startswith("https://"):
 		res = sentiment.replies_analysis(tweet_url=q)
 		return json.dumps({'data':res})
@@ -34,3 +36,7 @@ def server_error(error):
 @app.errorhandler(404)
 def page_not_found(error):
 	return 404
+
+
+if __name__=='__main__':
+	app.run(debug=True, port=5000)
