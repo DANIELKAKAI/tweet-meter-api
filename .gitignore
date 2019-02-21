@@ -2,8 +2,8 @@
 myenv/
 __pycache__/
 *.bat
-tweeter_api/apikey.json
-static/apikey.json
+/tweeter_api/apikey.json
+/static/apikey.json
 .serverless/
 node_modules/
 *.yml
