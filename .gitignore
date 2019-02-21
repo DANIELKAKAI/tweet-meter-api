@@ -7,3 +7,4 @@ static/apikey.json
 .serverless/
 node_modules/
 *.yml
+*.json
