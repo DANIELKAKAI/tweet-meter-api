@@ -2,8 +2,7 @@
 myenv/
 __pycache__/
 *.bat
-static/
 .serverless/
 node_modules/
 *.yml
-*.json
+
