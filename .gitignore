@@ -5,5 +5,6 @@ __pycache__/
 .serverless/
 node_modules/
 *.yml
-*.json
+static/apikey.json
+tweeter_api/apikey.json
 
