@@ -16,16 +16,16 @@ def index():
 @app.route('/search/',methods=['GET', 'POST'])
 def search():
 	sentiment = Sentiment(10)
-	q = ''
-	if request.method == 'GET': q = request.args.get('q','')
-	if request.method == 'POST':q = request.get_json()['query']
-	if q.startswith("https://"):
-		res = sentiment.replies_analysis(tweet_url=q)
-		return jsonify({'data':res})
-	elif q != '':
-		res = sentiment.tweets_analysis(query=q)
-		return jsonify({'data':res})
-	return jsonify({'data':[0,0,0]})
+	query = ''
+	if request.method == 'GET': query = request.args.get('query','')
+	if request.method == 'POST':query = request.get_json()['query']
+	if query.startswith("https://"):
+		res = sentiment.replies_analysis(tweet_url=query)
+		return jsonify(res)
+	elif query != '':
+		res = sentiment.tweets_analysis(query=query)
+		return jsonify(res)
+	return jsonify({'negative':0,'positive':0,'neutral':0})
 
 
 @app.errorhandler(500)

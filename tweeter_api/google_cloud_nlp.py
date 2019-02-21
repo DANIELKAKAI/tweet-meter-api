@@ -48,9 +48,7 @@ class Sentiment():
 
         
     def analyze(self,tweets):
-        positive_count = 0
-        negative_count = 0
-        neutral_count = 0
+        positive_count = negative_count = neutral_count = 0
         total = 1
         for content in tweets:
             analysis = TextBlob(content)
@@ -71,7 +69,10 @@ class Sentiment():
             else:
                 neutral_count+=1
         total = positive_count+negative_count+neutral_count
-        return [int(positive_count/total*100),int(neutral_count/total*100),int(negative_count/total*100)]
+        negative = int(negative_count/total*100)
+        positive= int(positive_count/total*100)
+        neutral = int(neutral_count/total*100)
+        return {'positive':positive,'neutral':neutral,'negative':negative}
 
     def get_tweet_id(self,url):
         r = re.findall(r'\d+',url,re.M|re.I)
