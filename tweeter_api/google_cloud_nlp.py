@@ -1,5 +1,3 @@
-"""Demonstrates how to make a simple call to the Natural Language API."""
-import os
 from google.cloud import language
 from google.cloud.language import enums
 from google.cloud.language import types
@@ -8,8 +6,6 @@ from textblob.exceptions import NotTranslated
 import re
 import tweepy
 
-
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]= "static/apikey.json"
 
 
 

@@ -3,7 +3,9 @@ from flask import request
 #from tweeter_api.sentiments import Sentiment
 from tweeter_api.google_cloud_nlp import Sentiment
 from flask_cors import CORS
+import os
 
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]= 'static/apikey.json'
 
 app = Flask(__name__)
 CORS(app)

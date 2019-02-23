@@ -7,4 +7,6 @@ node_modules/
 *.yml
 static/apikey.json
 tweeter_api/apikey.json
+.*json
+.serverless/
 
