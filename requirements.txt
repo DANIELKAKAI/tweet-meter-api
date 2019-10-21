@@ -26,7 +26,7 @@ jmespath==0.9.3
 kappa==0.6.0
 lambda-packages==0.20.0
 MarkupSafe==1.1.0
-nltk==3.4
+nltk==3.4.5
 oauthlib==3.0.1
 placebo==0.9.0
 protobuf==3.6.0
