@@ -36,7 +36,7 @@ PySocks==1.6.8
 python-dateutil==2.6.1
 python-slugify==1.2.4
 pytz==2018.9
-PyYAML==3.13
+PyYAML==5.4
 requests==2.21.0
 requests-oauthlib==1.2.0
 rsa==4.0
