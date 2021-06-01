@@ -49,7 +49,7 @@ tqdm==4.19.1
 troposphere==2.4.4
 tweepy==3.7.0
 Unidecode==1.0.23
-urllib3==1.24.1
+urllib3==1.26.5
 Werkzeug==0.14.1
 wsgi-request-logger==0.4.6
 zappa==0.47.1
