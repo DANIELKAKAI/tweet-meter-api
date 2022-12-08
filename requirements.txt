@@ -3,7 +3,7 @@ awacs==0.8.2
 boto3==1.9.97
 botocore==1.12.97
 cachetools==3.1.0
-certifi==2018.11.29
+certifi==2022.12.7
 cfn-flip==1.1.0.post1
 chardet==3.0.4
 Click==7.0
